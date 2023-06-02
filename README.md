@@ -1,2 +1,3 @@
 # universalis-ts
-TypeScript types and fetch codes from Universalis OpenAPI schema
+
+Typescript types generated using [https://github.com/drwpow/openapi-typescript](openapi-typescript) and pointed at Universalis

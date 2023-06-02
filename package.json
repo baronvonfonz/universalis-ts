@@ -1,0 +1,36 @@
+{
+  "name": "universalis-ts",
+  "version": "1.0.0",
+  "description": "TypeScript bindings for universalis.app FFXIV API",
+  "main": "",
+  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && npm run generate-v1 && npm run generate-v2",
+    "clean": "rimraf lib/v1.d.ts && rimraf lib/v2.d.ts",
+    "generate-v1": "openapi-typescript https://docs.universalis.app/api/schema/v1 -o ./lib/v1.d.ts",
+    "generate-v2": "openapi-typescript https://docs.universalis.app/api/schema/v2 -o ./lib/v2.d.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baronvonfonz/universalis-ts.git"
+  },
+  "keywords": [
+    "ffxiv",
+    "api",
+    "typescript"
+  ],
+  "author": "baronvonfonz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baronvonfonz/universalis-ts/issues"
+  },
+  "homepage": "https://github.com/baronvonfonz/universalis-ts#readme",
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "openapi-typescript": "^6.2.6",
+    "rimraf": "^5.0.1",
+    "typescript": "^4.9.5"
+  }
+}
